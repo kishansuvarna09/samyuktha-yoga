@@ -1,14 +1,16 @@
 /* Card */
 .card {
   display: grid;
-  grid-template-rows: 15rem 25rem;
+  grid-template-rows: 15rem minmax(8rem, 1fr);
 }
 
 .card .details {
   display: grid;
-  grid-template-rows: minmax(2rem, 4rem) minmax(7rem, 12rem) 4rem;
+  grid-template-rows: 3rem 1fr 3rem;
+  place-content: space-between;
   background-color: #f1f1f1;
-  padding: 2rem;
+  padding: 1rem;
+  height: 100%;
 }
 
 .card .details .title {
@@ -23,12 +25,12 @@
   font-size: 0.8rem;
 }
 
-.card .details .timings {
-  place-self: end;
+.card .details .description {
+  place-self: start !important;
 }
 
 .card .details > div {
-  height: fit-content;
+  padding: 0.5rem;
   width: 100%;
   height: 100%;
 }
@@ -39,16 +41,12 @@
 }
 /* ======================== MEDIA QUERIES (MEDIUM DEVICES) ==================================*/
 @media screen and (max-width: 1024px) {
+  .card .details {
+  }
 }
 
 /* ======================== MEDIA QUERIES (SMALL DEVICES) ==================================*/
 @media screen and (max-width: 600px) {
-  .card {
-    grid-template-rows: 15rem 15rem;
-  }
   .card .details {
-    height: 100%;
-    grid-template-rows: 3rem auto 1rem;
-    padding: 2rem;
   }
 }
