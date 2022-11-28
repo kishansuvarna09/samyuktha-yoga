@@ -1,0 +1,39 @@
+#header {
+  height: 6rem;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+}
+
+.logo-container img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.social-icon {
+  width: 2rem;
+  height: 2rem;
+}
+/* ======================== MEDIA QUERIES (MEDIUM DEVICES) ==================================*/
+@media screen and (max-width: 1024px) {
+  #header {
+    height: 5rem;
+  }
+  .logo-container {
+    height: 2rem;
+  }
+}
+
+/* ======================== MEDIA QUERIES (SMALL DEVICES) ==================================*/
+@media screen and (max-width: 600px) {
+  #header {
+    height: 5rem;
+  }
+  .logo-container {
+    height: 2rem;
+  }
+}

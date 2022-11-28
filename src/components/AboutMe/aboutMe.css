@@ -1,0 +1,45 @@
+#aboutMe .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 4rem;
+  place-items: center;
+}
+
+#aboutMe .container > div {
+  padding: 0.5rem;
+}
+
+#aboutMe .description {
+  margin: auto 0;
+}
+
+#aboutMe .description > div {
+  padding: 0.5rem;
+}
+
+#aboutMe .description .quote {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+/* ======================== MEDIA QUERIES (MEDIUM DEVICES) ==================================*/
+@media screen and (max-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 2rem;
+  }
+  #aboutMe .description .quote {
+    font-size: 1.4rem;
+  }
+}
+
+/* ======================== MEDIA QUERIES (SMALL DEVICES) ==================================*/
+@media screen and (max-width: 600px) {
+  #aboutMe .container {
+    display: block;
+    padding: 1rem;
+  }
+  #aboutMe .description .quote {
+    font-size: 1.2rem;
+  }
+}
