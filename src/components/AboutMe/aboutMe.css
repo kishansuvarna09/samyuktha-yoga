@@ -1,3 +1,6 @@
+#aboutMe {
+  height: 100%;
+}
 #aboutMe .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -23,9 +26,7 @@
 }
 /* ======================== MEDIA QUERIES (MEDIUM DEVICES) ==================================*/
 @media screen and (max-width: 1024px) {
-  .container {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+  #aboutMe .container {
     padding: 2rem;
   }
   #aboutMe .description .quote {

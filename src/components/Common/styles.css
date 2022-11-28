@@ -1,17 +1,14 @@
 /* Card */
 .card {
   display: grid;
-  grid-template-rows: 1fr;
   place-items: center;
 }
 
 .card .details {
   display: grid;
-  grid-template-rows: 4rem 10rem 4rem;
-  gap: 0.5rem;
+  grid-template-rows: minmax(2rem, 4rem) minmax(7rem, 12rem) 4rem;
   background-color: #f1f1f1;
   padding: 2rem;
-  /* height: 20rem; */
 }
 
 .card .details .title {
@@ -24,4 +21,31 @@
 .card .details .timings {
   text-align: center;
   font-size: 0.8rem;
+}
+
+.card .details .timings {
+  place-self: end;
+}
+
+.card .details > div {
+  height: fit-content;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  width: 100%;
+}
+/* ======================== MEDIA QUERIES (MEDIUM DEVICES) ==================================*/
+@media screen and (max-width: 1024px) {
+  .card .details {
+    padding: 1rem;
+  }
+}
+
+/* ======================== MEDIA QUERIES (SMALL DEVICES) ==================================*/
+@media screen and (max-width: 600px) {
+  .card .details {
+    padding: 1rem;
+  }
 }
