@@ -1,7 +1,7 @@
 /* Card */
 .card {
   display: grid;
-  grid-template-rows: 15rem 21rem;
+  grid-template-rows: 15rem 25rem;
 }
 
 .card .details {
@@ -39,10 +39,6 @@
 }
 /* ======================== MEDIA QUERIES (MEDIUM DEVICES) ==================================*/
 @media screen and (max-width: 1024px) {
-  .card {
-    /* display: grid;
-    grid-template-rows: 15rem 21rem; */
-  }
 }
 
 /* ======================== MEDIA QUERIES (SMALL DEVICES) ==================================*/
