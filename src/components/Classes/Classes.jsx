@@ -1,6 +1,6 @@
 import React from 'react';
-import Card from '../Common/Card';
-import classes from '../../data/classes';
+import Card from '@components/Common/Card';
+import classes from '@data/classes';
 import './classes.css';
 
 const Classes = () => {

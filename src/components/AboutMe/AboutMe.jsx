@@ -1,7 +1,7 @@
 import React from 'react';
 import './aboutMe.css';
-import content from '../../data';
-import AboutMeImage from '../../assets/about-me-image.webp';
+import content from '@data';
+import AboutMeImage from '/assets/about-me-image.webp';
 
 const AboutMe = () => {
   return (

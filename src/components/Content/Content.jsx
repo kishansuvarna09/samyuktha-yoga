@@ -1,7 +1,6 @@
 import React from 'react';
-import ContentImage from '../../assets/content-image.jpg';
+import ContentImage from '/assets/content-image.jpg';
 import './content.css';
-import content from '../../data';
 
 const Content = () => {
   return (

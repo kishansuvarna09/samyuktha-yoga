@@ -1,8 +1,8 @@
 import React from 'react';
-import Instagram from '../Icons/Instagram';
-import Logo from '../../assets/logo-icon.png';
+// import Instagram from '../Icons/Instagram';
+import Logo from '/assets/logo-icon.png';
 import './navbar.css';
-import Divider from '../Common/Divider';
+import Divider from '@components/Common/Divider';
 
 const Navbar = () => {
   return (
