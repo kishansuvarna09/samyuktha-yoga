@@ -9,7 +9,7 @@ const Content = () => {
         <img src={ContentImage} alt="Cover" />
         <div className="overlay">
           <div className="text">
-            GUIDING YOU TOWARDS A STRONG MIND AND BODY
+            <mark>GUIDING YOU TOWARDS A STRONG MIND AND BODY</mark>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import BeginnersImage from '/assets/classes_beginners.webp';
-import VinyasaImage from '/assets/classes_vinyasa.webp';
-import PrivateImage from '/assets/classes_private.webp';
+import VinyasaImage from '/assets/classes_vinyasa.jpg';
+import PrivateImage from '/assets/classes_private.jpg';
 
 const classes = [
   {

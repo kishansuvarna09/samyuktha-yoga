@@ -116,6 +116,11 @@ img {
   position: relative;
 }
 
+mark {
+  background-color: #ffffff;
+  opacity: 0.5;
+}
+
 /* ======================== MEDIA QUERIES (MEDIUM DEVICES) ==================================*/
 @media screen and (max-width: 1024px) {
   .container {

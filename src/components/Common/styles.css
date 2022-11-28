@@ -1,7 +1,7 @@
 /* Card */
 .card {
   display: grid;
-  place-items: center;
+  grid-template-rows: 15rem 21rem;
 }
 
 .card .details {
@@ -33,19 +33,26 @@
   height: 100%;
 }
 
-.image {
+.card .image > img {
   width: 100%;
+  height: 100%;
 }
 /* ======================== MEDIA QUERIES (MEDIUM DEVICES) ==================================*/
 @media screen and (max-width: 1024px) {
-  .card .details {
-    padding: 1rem;
+  .card {
+    /* display: grid;
+    grid-template-rows: 15rem 21rem; */
   }
 }
 
 /* ======================== MEDIA QUERIES (SMALL DEVICES) ==================================*/
 @media screen and (max-width: 600px) {
+  .card {
+    grid-template-rows: 15rem 15rem;
+  }
   .card .details {
-    padding: 1rem;
+    height: 100%;
+    grid-template-rows: 3rem auto 1rem;
+    padding: 2rem;
   }
 }
