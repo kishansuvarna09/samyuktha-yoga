@@ -12,8 +12,6 @@ import {
 } from '@lib/validate';
 import yogaSloth from '../../lotties/yoga-sloth.json';
 
-console.log('import.meta.env:', import.meta.env);
-
 const classTypes = [
   {
     name: 'BEGINNERS/INTERMEDIATE YOGA',
