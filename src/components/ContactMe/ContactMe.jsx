@@ -65,7 +65,7 @@ const ContactMe = () => {
     if (!nameValidation(_params?.user_name, 20)) {
       errors.user_name = 'Invalid input';
     }
-    if (!nameValidation(_params?.class_type, 20)) {
+    if (!nameValidation(_params?.class_type, 50)) {
       errors.class_type = 'Please select one';
     }
     if (!nameValidation(_params?.message, 50, true)) {
