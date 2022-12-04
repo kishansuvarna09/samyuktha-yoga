@@ -67,6 +67,9 @@ const ContactMe = () => {
     if (!nameValidation(_params?.user_name, 20)) {
       errors.user_name = 'Invalid input';
     }
+    if (!nameValidation(_params?.class_type, 20)) {
+      errors.class_type = 'Please select one';
+    }
     if (!nameValidation(_params?.message, 50, true)) {
       errors.message = 'Maximum of 50 characters allowed';
     }
@@ -188,18 +191,29 @@ const ContactMe = () => {
                 <Error message={errors?.user_email} />
               </div>
 
-              <div className="input">
+              <div
+                className="input"
+                style={{
+                  border: errors?.class_type
+                    ? '2px solid red'
+                    : '1px solid #000000',
+                }}
+              >
                 <select
                   name="class_type"
                   onChange={handleChange}
-                  value={templateParams.class_types}
+                  value={templateParams.class_type}
                 >
+                  <option value="" disabled>
+                    Select a class
+                  </option>
                   {classTypes.map((_class) => (
                     <option key={_class.value} value={_class.name}>
                       {_class.name}
                     </option>
                   ))}
                 </select>
+                <Error message={errors?.class_type} />
               </div>
               <div
                 className="input"
