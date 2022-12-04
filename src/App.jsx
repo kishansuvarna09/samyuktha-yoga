@@ -1,5 +1,11 @@
 import React from 'react';
-import { Navbar, Content, AboutMe, Classes } from './components';
+import {
+  Navbar,
+  Content,
+  AboutMe,
+  Classes,
+  ContactMe,
+} from './components';
 
 const App = () => {
   return (
@@ -8,6 +14,7 @@ const App = () => {
       <Content />
       <AboutMe />
       <Classes />
+      <ContactMe />
     </>
   );
 };

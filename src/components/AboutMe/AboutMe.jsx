@@ -20,7 +20,7 @@ const AboutMe = () => {
             dangerouslySetInnerHTML={{ __html: content.contentIntro }}
           />
           <div className="button-container">
-            <a href="#classes" className="btn btn-primary">
+            <a href="#classes" className="btn">
               Practice with me
             </a>
           </div>

@@ -1,0 +1,78 @@
+#contactMe {
+  height: 100%;
+  padding: 1rem 0;
+}
+#contactMe .container {
+  padding: 1rem;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+#contactMe .section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.email-contact {
+  display: grid;
+  gap: 1.5rem;
+  width: 100%;
+  align-items: center;
+}
+.social-contact {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 5rem auto;
+}
+.social-container {
+  display: grid;
+  grid-template-rows: 3rem auto;
+  justify-content: center;
+  align-content: center;
+}
+.social-container > div {
+  padding: 2rem;
+  text-align: center;
+}
+.social-container .label {
+  font-size: 28px;
+  font-weight: 600;
+  padding: 1rem;
+}
+a.social {
+  padding: 0.1rem 0.3rem;
+  border-radius: 10px;
+  transition: transform 250ms;
+  display: inline-block;
+}
+a.social:hover {
+  transform: translateY(5px);
+  transform: scale(1.5);
+}
+a.instagram {
+  color: white;
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+}
+/* ======================== MEDIA QUERIES (MEDIUM DEVICES) ==================================*/
+@media screen and (max-width: 1024px) {
+  #contactMe .section {
+    grid-template-rows: 1fr;
+    grid-template-columns: auto;
+  }
+}
+
+/* ======================== MEDIA QUERIES (SMALL DEVICES) ==================================*/
+@media screen and (max-width: 600px) {
+  #contactMe .section {
+    grid-template-rows: 1fr;
+    grid-template-columns: auto;
+  }
+}
