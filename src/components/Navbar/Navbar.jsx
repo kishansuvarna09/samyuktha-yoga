@@ -1,5 +1,5 @@
 import React from 'react';
-// import Instagram from '../Icons/Instagram';
+import { motion } from 'framer-motion';
 import Logo from '/assets/logo-icon.png';
 import './navbar.css';
 import Divider from '@components/Common/Divider';
@@ -8,11 +8,17 @@ const Navbar = () => {
   return (
     <header id="header">
       <div className="container">
-        <div className="logo-container title">
-          SAMYUKTHA
-          <img src={Logo} alt="Logo" />
-          YOGA
-        </div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="logo-container title">
+            SAMYUKTHA
+            <img src={Logo} alt="Logo" />
+            YOGA
+          </div>
+        </motion.div>
         <Divider />
       </div>
       {/* <div className="nav-links-container">
