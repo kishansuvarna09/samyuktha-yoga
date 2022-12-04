@@ -103,7 +103,7 @@ const ContactMe = () => {
   return (
     <>
       {response?.success && (
-        <div className="overlay">
+        <div className="popup-container">
           <div className="popup">
             <div className="popup-content">
               <div className="icon-container">
