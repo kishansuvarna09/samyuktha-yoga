@@ -218,11 +218,17 @@ select {
   .container {
     width: var(--container-width-md);
   }
+  .popup {
+    width: 75%;
+  }
 }
 
 /* ======================== MEDIA QUERIES (SMALL DEVICES) ==================================*/
 @media screen and (max-width: 600px) {
   .container {
     width: var(--container-width-sm);
+  }
+  .popup {
+    width: 95%;
   }
 }
