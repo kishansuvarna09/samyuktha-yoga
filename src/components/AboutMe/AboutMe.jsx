@@ -8,7 +8,11 @@ const AboutMe = () => {
     <section id="aboutMe">
       <div className="container">
         <div className="image">
-          <img src={AboutMeImage} alt="Me" />
+          <img
+            src={AboutMeImage}
+            alt="Me"
+            className="object-cover object-right"
+          />
         </div>
         <div className="description">
           <div

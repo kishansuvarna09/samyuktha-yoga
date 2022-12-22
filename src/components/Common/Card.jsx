@@ -10,7 +10,16 @@ const Card = ({ data }) => {
       <div className="details">
         <div className="title">{data?.title}</div>
         <div className="description">{data?.description}</div>
-        <div className="timings">{data?.timings}</div>
+        <div>
+          {data?.timings &&
+            data?.timings.map((item, index) => {
+              return (
+                <div key={index} className="timings">
+                  {item}
+                </div>
+              );
+            })}
+        </div>
       </div>
     </div>
   );

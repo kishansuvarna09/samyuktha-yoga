@@ -1,28 +1,37 @@
-import BeginnersImage from '/assets/classes_beginners.webp';
+import BeginnersImage from '/assets/classes_beginners.jpg';
 import VinyasaImage from '/assets/classes_vinyasa.jpg';
 import PrivateImage from '/assets/classes_private.jpg';
+import WeekendWorkshopImage from '/assets/classes_weekend.jpg';
 
 const classes = [
   {
     title: 'BEGINNERS/INTERMEDIATE YOGA',
+    subtitle: '12 day program YOGA',
     description:
-      'Join me in a Studio setting for a 45 Minute Hatha style flow, helping to welcome Yoga into the body and the mind! This studio class integrates yoga poses and breathwork and is perfect for anyone starting their Yoga journey!',
-    timings: 'Monday 12-12:45PM - Fitness Garage Harrogate',
+      'Join me in a Studio setting for a 60 Minute Hatha style flow, helping to welcome Yoga into the body and the mind! This studio class integrates yoga poses and breathwork and is perfect for anyone starting their Yoga journey!',
+    timings: ['Monday - (8am to 9am)'],
     image: BeginnersImage,
   },
   {
     title: 'VINYASA',
+    subtitle: '(Intermediate/Advanced',
     description:
       'Join me for an Energising Vinyasa style flow for 60 Mins, helping to bring strength to the body and a release for the mind.',
-    timings: 'Monday 12-12:45PM - Fitness Garage Harrogate',
+    timings: ['Saturday - (8am to 9am)'],
     image: VinyasaImage,
   },
-
   {
-    title: 'PRIVATE CLASSES & 1-2-1',
+    title: 'Pranayama/breathe work & meditation',
     description:
-      'Private Classes allow you to dive deeper into your yoga practice in the comfort of your own home in person or on Zoom. The focus is on alignment and breath, and a special emphasis on proper technique helping you reconnect and rejuvenate your body.',
+      'Relax and De-stress with me in a soothing pranayama class suitable for all levels and for anyone wanting some time out for self care!',
+    timings: ['Saturday - (10am to 11am)', 'Sunday - (10am to 11am)'],
     image: PrivateImage,
+  },
+  {
+    title: 'Weekend Workshop',
+    description:
+      'Join me on the weekend workshop where you will be nourished and guided through gentle restorative yoga postures, receive hands-on energy healing, and then gather in a circle for intention setting. Please bring a journal, pen and a hand towel.',
+    image: WeekendWorkshopImage,
   },
 ];
 

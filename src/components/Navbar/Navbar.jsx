@@ -7,15 +7,15 @@ import Divider from '@components/Common/Divider';
 const Navbar = () => {
   return (
     <header id="header">
-      <div className="container">
+      <div className="fixed w-full bg-white px-20 z-20">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="logo-container title">
+          <div className="flex justify-center items-center py-2 text-[1.75rem] font-light">
             SAMYUKTHA
-            <img src={Logo} alt="Logo" />
+            <img src={Logo} alt="Logo" className="h-12 w-12" />
             YOGA
           </div>
         </motion.div>
