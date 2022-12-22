@@ -76,6 +76,10 @@ const ContactMe = () => {
 
   const sendEmail = async () => {
     setErrors({});
+    setResponse({
+      success: 'Yusss YOU DID IT! Sam will get back to you soo..oon.',
+    });
+    return false;
     const validate = await validateInput(templateParams);
     if (!isEmptyObject(validate)) {
       setErrors(validate);
