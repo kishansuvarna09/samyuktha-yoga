@@ -14,7 +14,7 @@
 
 .card .details {
   display: grid;
-  grid-template-rows: auto 1fr 3rem;
+  grid-template-rows: 4rem 1fr minmax(2rem, max-content);
   place-content: space-between;
   background-color: #f1f1f1;
   padding: 1rem;

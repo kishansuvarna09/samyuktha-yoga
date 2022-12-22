@@ -163,7 +163,7 @@ const ContactMe = () => {
                 style={{
                   border: errors?.user_name
                     ? '2px solid red'
-                    : '1px solid #000000',
+                    : '1px solid rgb(177 142 142)',
                 }}
               >
                 <input
@@ -180,7 +180,7 @@ const ContactMe = () => {
                 style={{
                   border: errors?.user_email
                     ? '2px solid red'
-                    : '1px solid #000000',
+                    : '1px solid rgb(177 142 142)',
                 }}
               >
                 <input
@@ -198,7 +198,7 @@ const ContactMe = () => {
                 style={{
                   border: errors?.class_type
                     ? '2px solid red'
-                    : '1px solid #000000',
+                    : '1px solid rgb(177 142 142)',
                 }}
               >
                 <select
@@ -222,7 +222,7 @@ const ContactMe = () => {
                 style={{
                   border: errors?.message
                     ? '2px solid red'
-                    : '1px solid #000000',
+                    : '1px solid rgb(177 142 142)',
                 }}
               >
                 <textarea

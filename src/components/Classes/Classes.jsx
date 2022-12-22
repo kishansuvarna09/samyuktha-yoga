@@ -7,8 +7,8 @@ const Classes = () => {
   return (
     <section id="classes">
       <div className="container">
-        {classes.map(function (name, index) {
-          return <Card key={index} data={name} />;
+        {classes.map(function (_class, index) {
+          return <Card key={index} data={_class} />;
         })}
       </div>
     </section>
