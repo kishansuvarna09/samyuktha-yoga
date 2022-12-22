@@ -9,7 +9,10 @@ const classes = [
     subtitle: '12 day program YOGA',
     description:
       'Join me in a Studio setting for a 60 Minute Hatha style flow, helping to welcome Yoga into the body and the mind! This studio class integrates yoga poses and breathwork and is perfect for anyone starting their Yoga journey!',
-    timings: ['Monday - (8am to 9am)'],
+    timings: [
+      'Monday, Wednesday, Friday - (8am to 9am)',
+      'Tuesday, Thursday, Friday - (8pm to 9pm)',
+    ],
     image: BeginnersImage,
   },
   {
@@ -17,14 +20,14 @@ const classes = [
     subtitle: '(Intermediate/Advanced',
     description:
       'Join me for an Energising Vinyasa style flow for 60 Mins, helping to bring strength to the body and a release for the mind.',
-    timings: ['Saturday - (8am to 9am)'],
+    timings: ['Saturday, Sunday - (8am to 9am)'],
     image: VinyasaImage,
   },
   {
     title: 'Pranayama/breathe work & meditation',
     description:
       'Relax and De-stress with me in a soothing pranayama class suitable for all levels and for anyone wanting some time out for self care!',
-    timings: ['Saturday - (10am to 11am)', 'Sunday - (10am to 11am)'],
+    timings: ['Saturday, Sunday - (10am to 11am)'],
     image: PrivateImage,
   },
   {
