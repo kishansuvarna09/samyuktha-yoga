@@ -5,7 +5,14 @@ const Card = ({ data }) => {
   return (
     <div className="card">
       <div className="image">
-        <img src={data?.image} alt="image" />
+        <img
+          src={data?.image}
+          alt="image"
+          className={
+            data?.title === 'Weekend Workshop' &&
+            `object-[0_-7rem] md:object-[0_-2rem]`
+          }
+        />
       </div>
       <div className="details">
         <div className="title">{data?.title}</div>
