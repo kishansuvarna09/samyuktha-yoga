@@ -22,8 +22,12 @@ const classTypes = [
     value: 'level_2',
   },
   {
-    name: 'PRIVATE CLASSES & 1-2-1',
+    name: 'Pranayama/breathe work & meditation',
     value: 'level_3',
+  },
+  {
+    name: 'Weekend Workout',
+    value: 'level_4',
   },
 ];
 
@@ -76,10 +80,6 @@ const ContactMe = () => {
 
   const sendEmail = async () => {
     setErrors({});
-    setResponse({
-      success: 'Yusss YOU DID IT! Sam will get back to you soo..oon.',
-    });
-    return false;
     const validate = await validateInput(templateParams);
     if (!isEmptyObject(validate)) {
       setErrors(validate);
