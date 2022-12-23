@@ -25,10 +25,10 @@ const classTypes = [
     name: 'Pranayama/breathe work & meditation',
     value: 'level_3',
   },
-  {
-    name: 'Weekend Workout',
-    value: 'level_4',
-  },
+  // {
+  //   name: 'Weekend Workshop',
+  //   value: 'level_4',
+  // },
 ];
 
 const Error = ({ message }) => (
@@ -158,6 +158,10 @@ const ContactMe = () => {
               </div>
             </div>
             <div className="email-contact">
+              <div>
+                Click on "Book Session" to get complete iterinary of
+                the session and fee structure
+              </div>
               <div
                 className="input"
                 style={{

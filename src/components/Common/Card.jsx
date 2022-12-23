@@ -16,12 +16,15 @@ const Card = ({ data }) => {
       </div>
       <div className="details">
         <div className="title">{data?.title}</div>
+        <div className="grid place-items-center">
+          {data?.subtitle}
+        </div>
         <div className="description">{data?.description}</div>
-        <div>
+        <div className="">
           {data?.timings &&
             data?.timings.map((item, index) => {
               return (
-                <div key={index} className="timings">
+                <div key={index} className="timings italic">
                   {item}
                 </div>
               );
