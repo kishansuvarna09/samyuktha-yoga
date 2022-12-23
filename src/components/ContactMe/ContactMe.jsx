@@ -159,7 +159,7 @@ const ContactMe = () => {
             </div>
             <div className="email-contact">
               <div>
-                Click on "Book Session" to get complete iterinary of
+                Click on "Book Session" to get complete itinerary of
                 the session and fee structure
               </div>
               <div
