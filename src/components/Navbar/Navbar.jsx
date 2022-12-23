@@ -20,6 +20,9 @@ const Navbar = () => {
           </div>
         </motion.div>
         <Divider />
+        <div className="italic text-center text-[#10a19d] pb-2 font-semibold">
+          Staring from 02 Janurary 2023
+        </div>
       </div>
       {/* <div className="nav-links-container">
         <div className="grid-center nav-link">

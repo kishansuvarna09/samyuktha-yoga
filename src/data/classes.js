@@ -8,7 +8,7 @@ const classes = [
     title: 'BEGINNERS/INTERMEDIATE YOGA',
     subtitle: '12-Day Program',
     description:
-      'Join me in a Studio setting for a 60 Minute Hatha style flow, helping to welcome Yoga into the body and the mind! This studio class integrates yoga poses and breathwork and is perfect for anyone starting their Yoga journey!',
+      'Join me in a virtual setting for a 60 Minute Hatha style flow, helping to welcome Yoga into the body and the mind! This session integrates yoga poses and breathwork and is perfect for anyone starting their Yoga journey!',
     timings: [
       'Monday, Wednesday, Friday - (8am to 9am)',
       'Tuesday, Thursday, Friday - (8pm to 9pm)',
