@@ -16,10 +16,6 @@ const AboutMe = () => {
         </div>
         <div className="description">
           <div
-            className="quote"
-            dangerouslySetInnerHTML={{ __html: content.contentQuote }}
-          />
-          <div
             className="about-me"
             dangerouslySetInnerHTML={{ __html: content.contentIntro }}
           />
