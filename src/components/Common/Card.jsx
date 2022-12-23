@@ -8,10 +8,7 @@ const Card = ({ data }) => {
         <img
           src={data?.image}
           alt="image"
-          className={
-            data?.type === 'level_3' &&
-            `object-[0_-2rem] md:object-[0_-2rem]`
-          }
+          className={data?.type === 'level_3' && `object-top`}
         />
       </div>
       <div className="details">
