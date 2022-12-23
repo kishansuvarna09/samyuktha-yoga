@@ -28,7 +28,7 @@ const classes = [
     subtitle: '8-Day Program',
     description:
       'Relax and De-stress with me in a soothing pranayama class suitable for all levels and for anyone wanting some time out for self care!',
-    timings: ['Saturday, Sunday - (10am to 11am)'],
+    timings: ['Saturday, Sunday - (45 mins)'],
     image: PrivateImage,
   },
   {
