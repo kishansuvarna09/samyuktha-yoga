@@ -9,7 +9,7 @@ const Card = ({ data }) => {
           src={data?.image}
           alt="image"
           className={
-            data?.title === 'Weekend Workshop' &&
+            data?.type === 'level_3' &&
             `object-[0_-7rem] md:object-[0_-2rem]`
           }
         />

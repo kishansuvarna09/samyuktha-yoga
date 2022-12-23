@@ -5,6 +5,7 @@ import WeekendWorkshopImage from '/assets/classes_weekend.jpg';
 
 const classes = [
   {
+    type: 'level_0',
     title: 'BEGINNERS/INTERMEDIATE YOGA',
     subtitle: '12-Day Program',
     description:
@@ -16,6 +17,7 @@ const classes = [
     image: BeginnersImage,
   },
   {
+    type: 'level_1',
     title: 'VINYASA - (Intermediate/Advanced)',
     subtitle: '8-Day Program',
     description:
@@ -24,6 +26,7 @@ const classes = [
     image: VinyasaImage,
   },
   {
+    type: 'level_2',
     title: 'Pranayama/breathe work - All Levels',
     subtitle: '8-Day Program',
     description:
@@ -32,6 +35,7 @@ const classes = [
     image: PrivateImage,
   },
   {
+    type: 'level_3',
     title: 'Weekend Workshop - All Levels',
     subtitle: '2-Day Program',
     description:
