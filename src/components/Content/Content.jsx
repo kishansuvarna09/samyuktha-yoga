@@ -18,7 +18,6 @@ const Content = () => {
               alt="Cover"
               className="h-screen object-cover object-[75%] lg:object-[10px 20px]"
             />
-            {/* </div> */}/
           </div>
         </motion.div>
         <motion.div
