@@ -51,6 +51,7 @@ const ContactMe = () => {
   });
   const [response, setResponse] = useState(null);
   const [errors, setErrors] = useState({});
+  const [sendingEmail, setSendingEmail] = useState(false);
 
   function handleChange(evt) {
     if (response) setResponse(null);
@@ -242,12 +243,16 @@ const ContactMe = () => {
                 <button
                   type="button"
                   className="btn btn-primary"
-                  onClick={(e) => {
+                  onClick={async (e) => {
                     e.preventDefault();
-                    sendEmail();
+                    if (!sendingEmail) {
+                      setSendingEmail(true);
+                      await sendEmail();
+                      setSendingEmail(false);
+                    }
                   }}
                 >
-                  Book Session
+                  {sendingEmail ? 'Please Wait' : 'Book Session'}
                 </button>
               </div>
             </div>
