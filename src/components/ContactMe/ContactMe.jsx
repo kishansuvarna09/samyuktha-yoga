@@ -14,7 +14,11 @@ import yogaSloth from '../../lotties/yoga-sloth.json';
 
 const classTypes = [
   {
-    name: 'BEGINNERS/INTERMEDIATE YOGA',
+    name: 'BEGINNERS/INTERMEDIATE YOGA (8am to 9am)',
+    value: 'level_1',
+  },
+  {
+    name: 'BEGINNERS/INTERMEDIATE YOGA (8pm to 9pm)',
     value: 'level_1',
   },
   {
@@ -211,11 +215,19 @@ const ContactMe = () => {
                   onChange={handleChange}
                   value={templateParams.class_type}
                 >
-                  <option value="" disabled>
+                  <option
+                    value=""
+                    disabled
+                    className="text-[0.75rem] md:text-[1rem]"
+                  >
                     Select a class
                   </option>
                   {classTypes.map((_class) => (
-                    <option key={_class.value} value={_class.name}>
+                    <option
+                      key={_class.value}
+                      value={_class.name}
+                      className="text-[0.75rem] lg:text-[1rem]"
+                    >
                       {_class.name}
                     </option>
                   ))}
