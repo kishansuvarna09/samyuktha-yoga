@@ -13,7 +13,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-brands-svg-icons": "^6.2.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "daisyui": "^2.46.0",
+    "daisyui": "^2.46.1",
     "firebase": "^9.14.0",
     "framer-motion": "^7.6.18",
     "lottie-react": "^2.3.1",
