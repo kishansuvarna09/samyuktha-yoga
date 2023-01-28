@@ -11,8 +11,8 @@ const classes = [
     description:
       'Join me in a virtual setting for a 60 Minute Hatha style flow, helping to welcome Yoga into the body and the mind! This session integrates Yoga poses and breathwork and is perfect for anyone starting their Yoga journey!',
     timings: [
-      'Monday, Wednesday, Friday - (8pm to 9pm)',
-      'Tuesday, Thursday, Friday - (8am to 9am)',
+      'Monday, Tuesday, Wednesday - (8pm to 9pm)',
+      'Wednesday, Thursday, Friday - (8am to 9am)',
     ],
     image: BeginnersImage,
   },
