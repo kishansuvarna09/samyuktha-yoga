@@ -21,7 +21,7 @@ const Navbar = () => {
         </motion.div>
         <Divider />
         <div className="italic text-center text-[#10a19d] pb-2 font-semibold">
-          February 2023 batch
+          March 2023 batch
         </div>
       </div>
       {/* <div className="nav-links-container">

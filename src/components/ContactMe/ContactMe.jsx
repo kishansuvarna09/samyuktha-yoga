@@ -17,10 +17,10 @@ const classTypes = [
     name: 'BEGINNERS/INTERMEDIATE YOGA (8am to 9am)',
     value: 'level_1',
   },
-  {
-    name: 'BEGINNERS/INTERMEDIATE YOGA (8pm to 9pm)',
-    value: 'level_1',
-  },
+  // {
+  //   name: 'BEGINNERS/INTERMEDIATE YOGA (8pm to 9pm)',
+  //   value: 'level_1',
+  // },
   {
     name: 'VINYASA',
     value: 'level_2',
