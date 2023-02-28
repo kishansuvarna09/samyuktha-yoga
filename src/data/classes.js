@@ -10,7 +10,7 @@ const classes = [
     subtitle: '12-Day Program',
     description:
       'Join me in a virtual setting for a 60 Minute Hatha style flow, helping to welcome Yoga into the body and the mind! This session integrates Yoga poses and breathwork and is perfect for anyone starting their Yoga journey!',
-    timings: ['Monday, Wednesday, Friday - (8pm to 9pm)'],
+    timings: ['Monday, Wednesday, Friday - (8am to 9am)'],
     image: BeginnersImage,
   },
   {
