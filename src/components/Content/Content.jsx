@@ -26,7 +26,7 @@ const Content = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2 }}
         >
-          <div className="text-5xl font-extralight w-[90%] md:w-[60%] lg:w-[23%] leading-[6rem] text-center">
+          <div className="text-5xl font-extralight w-[90%] md:w-[60%] lg:w-[40%] leading-[6rem] text-center">
             <mark>GUIDING YOU TOWARDS A STRONG MIND AND BODY</mark>
           </div>
         </motion.div>

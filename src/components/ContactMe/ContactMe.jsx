@@ -14,21 +14,21 @@ import yogaSloth from '../../lotties/yoga-sloth.json';
 
 const classTypes = [
   {
-    name: 'BEGINNERS/INTERMEDIATE YOGA (8am to 9am)',
+    name: 'BEGINNERS BATCH (8.30am to 9.30am)',
+    value: 'level_0',
+  },
+  {
+    name: 'INTERMEDIATE BATCH (8pm to 8.30pm)',
     value: 'level_1',
   },
   // {
-  //   name: 'BEGINNERS/INTERMEDIATE YOGA (8pm to 9pm)',
-  //   value: 'level_1',
+  //   name: 'VINYASA',
+  //   value: 'level_2',
   // },
-  {
-    name: 'VINYASA',
-    value: 'level_2',
-  },
-  {
-    name: 'Pranayama/breathe work & meditation',
-    value: 'level_3',
-  },
+  // {
+  //   name: 'Pranayama/breathe work & meditation',
+  //   value: 'level_3',
+  // },
   // {
   //   name: 'Weekend Workshop',
   //   value: 'level_4',

@@ -7,7 +7,7 @@
 }
 
 .card:hover {
-  transform: scale(1.1);
+  transform: scale(1.02);
   transition: 0.8s;
   cursor: pointer;
 }
