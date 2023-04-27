@@ -19,7 +19,7 @@ const classes = [
     subtitle: '8-Day Program',
     description:
       'Join me for an Energising Vinyasa style flow for 60 minutes, helping to bring strength to the body and a release for the mind.',
-    timings: ['Tuesday, Thursday - (8.30pm to 9.30pm)'],
+    timings: ['Tuesday, Thursday - (8.30am to 9.30am)'],
     image: VinyasaImage,
   },
   // {
