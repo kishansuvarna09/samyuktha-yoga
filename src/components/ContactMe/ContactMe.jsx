@@ -18,7 +18,7 @@ const classTypes = [
     value: 'level_0',
   },
   {
-    name: 'INTERMEDIATE BATCH (8.30pm to 9.30pm)',
+    name: 'INTERMEDIATE BATCH (8.30am to 9.30am)',
     value: 'level_1',
   },
   // {
