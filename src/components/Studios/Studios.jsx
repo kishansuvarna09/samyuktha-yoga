@@ -4,13 +4,13 @@ import UfcImage from '/assets/portfolio/teaching-ufc-gym.jpg';
 import PuppyImage from '/assets/portfolio/teaching-puppy-yoga.jpg';
 
 const studios = [
-  'UFC Gym',
-  'Veo Fitness',
-  'Fitness Terminal',
-  'Little Yogi',
-  'Anytime Fitness',
-  'Fitness Together',
-  'Yogle',
+  { name: 'UFC Gym', logo: '/assets/studios/ufc-gym.svg' },
+  { name: 'Veo Fitness', logo: '/assets/studios/veo-fitness.png' },
+  { name: 'Fitness Terminal', logo: '/assets/studios/fitness-terminal.png' },
+  { name: 'Little Yogi', logo: '/assets/studios/little-yogi.png' },
+  { name: 'Anytime Fitness', logo: '/assets/studios/anytime-fitness.svg' },
+  { name: 'Fitness Together', logo: '/assets/studios/fitness-together.png' },
+  { name: 'Yogle' },
 ];
 
 const offerings = [
@@ -45,8 +45,13 @@ const Studios = () => {
       <div className="studios-marquee" aria-label="Studios where Samyuktha teaches">
         <div className="marquee-track">
           {[...studios, ...studios].map((studio, index) => (
-            <span className="marquee-item" key={`${studio}-${index}`}>
-              {studio} <span className="marquee-star" aria-hidden="true">✦</span>
+            <span className="marquee-item" key={`${studio.name}-${index}`}>
+              {studio.logo ? (
+                <img src={studio.logo} alt={studio.name} loading="lazy" />
+              ) : (
+                studio.name
+              )}{' '}
+              <span className="marquee-star" aria-hidden="true">✦</span>
             </span>
           ))}
         </div>

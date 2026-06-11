@@ -53,6 +53,18 @@
   color: var(--color-violet);
 }
 
+/* logo treatment: grayscale + multiply so white logo boxes
+   melt into the periwinkle background */
+.marquee-item img {
+  display: inline-block;
+  width: auto;
+  height: clamp(2rem, 3.4vw, 3rem);
+  object-fit: contain;
+  filter: grayscale(1) contrast(1.05);
+  mix-blend-mode: multiply;
+  opacity: 0.9;
+}
+
 @keyframes marquee-scroll {
   from {
     transform: translateX(0);
