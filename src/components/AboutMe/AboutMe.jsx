@@ -29,8 +29,8 @@ const AboutMe = () => {
               everywhere: <em>yoga is for every body.</em>
             </p>
             <p className="about-note">
-              I teach Hatha, Ashtanga and Vinyasa across Dubai's studios and gyms,
-              and online wherever you are. My classes are rooted in breath,
+              I teach Hatha, Ashtanga and Vinyasa yoga classes across
+              Dubai's studios and gyms, and online wherever you are. My classes are rooted in breath,
               honest alignment, and quiet consistency — strong enough to
               challenge you, gentle enough to keep you coming back.
             </p>
