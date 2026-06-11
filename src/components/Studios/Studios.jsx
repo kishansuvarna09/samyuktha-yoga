@@ -16,7 +16,7 @@ const studios = [
 const offerings = [
   {
     title: 'Studio & gym classes',
-    detail: 'Group Hatha and Vinyasa flows at studios and gyms across Dubai',
+    detail: 'Group Hatha, Ashtanga and Vinyasa flows at studios and gyms across Dubai',
   },
   {
     title: 'Kids yoga',

@@ -5,7 +5,7 @@ import PortraitImage from '/assets/portfolio/portrait-evening-smile.jpg';
 const stats = [
   { value: '300', unit: 'hr', label: 'Certified teacher' },
   { value: '7', unit: 'studios', label: 'Across Dubai' },
-  { value: '2', unit: 'traditions', label: 'Hatha and Ashtanga' },
+  { value: '3', unit: 'styles', label: 'Hatha · Ashtanga · Vinyasa' },
   { value: '60', unit: 'min', label: 'Breath-led flows' },
 ];
 
@@ -29,7 +29,7 @@ const AboutMe = () => {
               everywhere: <em>yoga is for every body.</em>
             </p>
             <p className="about-note">
-              I teach Hatha and Ashtanga across Dubai's studios and gyms,
+              I teach Hatha, Ashtanga and Vinyasa across Dubai's studios and gyms,
               and online wherever you are. My classes are rooted in breath,
               honest alignment, and quiet consistency — strong enough to
               challenge you, gentle enough to keep you coming back.

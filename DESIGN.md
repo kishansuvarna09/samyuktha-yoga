@@ -55,10 +55,11 @@ The page is a full-viewport slide deck (`SlideDeck` — scroll-snap container, s
 dot navigation, `01 / 06` counter bottom-left, no section menu in the nav; the
 only persistent CTA is an Instagram link).
 
-1. **Hero** (`#content`) — masthead "SAMYUKTHA yoga", tagline "Five studios. Two
-   traditions. One breath at a time.", moon-phase row with her mat portrait.
+1. **Hero** (`#content`) — masthead "SAMYUKTHA yoga", tagline "300 hrs. Three
+   styles. One breath at a time.", moon-phase row with her mat portrait.
 2. **01 The teacher** (`#aboutMe`) — framed evening portrait + personal statement
-   + stats row (200hr / 5 studios / 2 traditions / 60min).
+   + stats row (300hr / 7 studios / 3 styles / 60min). Styles are always the
+   same three, in this order: Hatha · Ashtanga · Vinyasa.
 3. **02 The practice** (`#path`) — beginner→expert path in three serif-numbered
    stages: Begin / Deepen / Refine.
 4. **03 Studios & classes** (`#studios`) — infinite marquee of studio wordmarks

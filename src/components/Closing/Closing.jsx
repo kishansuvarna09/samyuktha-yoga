@@ -34,7 +34,7 @@ const Closing = () => {
           </div>
           <div className="footer-meta">
             <span>Dubai · Online</span>
-            <span>Hatha · Ashtanga</span>
+            <span>Hatha · Ashtanga · Vinyasa</span>
             <span>© {new Date().getFullYear()} Samyuktha Yoga</span>
           </div>
         </footer>
