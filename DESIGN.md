@@ -53,7 +53,7 @@ No other colors. Photography is rendered grayscale via `filter: grayscale(1)`
 
 The page is a full-viewport slide deck (`SlideDeck` — scroll-snap container, side
 dot navigation, `01 / 06` counter bottom-left, no section menu in the nav; the
-only persistent CTA is "Book a session").
+only persistent CTA is an Instagram link).
 
 1. **Hero** (`#content`) — masthead "SAMYUKTHA yoga", tagline "Five studios. Two
    traditions. One breath at a time.", moon-phase row with her mat portrait.
@@ -68,9 +68,10 @@ only persistent CTA is "Book a session").
 5. **04 Off the mat** (`#life`) — staggered editorial collage of life photos
    (desert drives, coconut breaks, race days, dog cuddles, matcha, yoga
    everywhere).
-6. **05 Book** (`#contactMe`, dark `--color-ink-deep`) — serif heading, underline
-   form (EmailJS — logic unchanged), Instagram, footer. Fixed chrome inverts to
-   paper via `body.deck-dark`.
+6. **05 Namaste** (`#namaste`, dark `--color-ink-deep`) — closing slide: big
+   serif "Namaste x" over a faint mandala, Instagram link, footer. Fixed chrome
+   inverts to paper via `body.deck-dark`. (The booking form/EmailJS feature was
+   removed entirely.)
 
 ## Photography
 

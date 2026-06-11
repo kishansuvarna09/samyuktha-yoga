@@ -70,10 +70,10 @@ const Content = () => {
             Samyuktha<span className="hero-yoga">yoga</span>
           </h1>
           <p className="hero-tagline">
-            Seven studios. Two traditions. <em>One breath at a time.</em>
+            300 hrs. Two traditions. <em>One breath at a time.</em>
           </p>
-          <a href="#contactMe" className="btn">
-            Book a session
+          <a href="#aboutMe" className="btn">
+            Meet the teacher
           </a>
         </div>
         <MoonPhases />

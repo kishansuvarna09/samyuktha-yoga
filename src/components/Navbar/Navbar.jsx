@@ -9,8 +9,11 @@ const Navbar = () => {
           Samyuktha<span>yoga</span>
         </a>
         <div className="nav-note">Dubai · Hatha · Ashtanga</div>
-        <a href="#contactMe" className="btn nav-book">
-          Book a session
+        <a
+          href="https://www.instagram.com/samyuktha.acharya"
+          className="btn nav-book"
+        >
+          Instagram
         </a>
       </div>
     </header>

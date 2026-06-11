@@ -4,7 +4,7 @@ import AboutMe from './AboutMe/AboutMe';
 import Path from './Path/Path';
 import Studios from './Studios/Studios';
 import Life from './Life/Life';
-import ContactMe from './ContactMe/ContactMe';
+import Closing from './Closing/Closing';
 import SlideDeck from './SlideDeck/SlideDeck';
 
 export {
@@ -14,6 +14,6 @@ export {
   Path,
   Studios,
   Life,
-  ContactMe,
+  Closing,
   SlideDeck,
 };

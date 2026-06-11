@@ -6,7 +6,7 @@ import {
   Path,
   Studios,
   Life,
-  ContactMe,
+  Closing,
   SlideDeck,
 } from './components';
 
@@ -16,7 +16,7 @@ const slides = [
   { id: 'slide-path', label: 'The practice', content: <Path /> },
   { id: 'slide-studios', label: 'Studios and classes', content: <Studios /> },
   { id: 'slide-life', label: 'Off the mat', content: <Life /> },
-  { id: 'slide-book', label: 'Book a session', theme: 'dark', content: <ContactMe /> },
+  { id: 'slide-namaste', label: 'Namaste', theme: 'dark', content: <Closing /> },
 ];
 
 const App = () => {

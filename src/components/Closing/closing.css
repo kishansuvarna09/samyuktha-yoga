@@ -1,29 +1,35 @@
-#contactMe {
+#namaste {
   background: var(--color-ink-deep);
   color: var(--color-paper);
   padding: 5.5rem 0 2rem;
   overflow: hidden;
 }
 
-.contact-mandala {
+.closing-mandala {
   position: absolute;
-  top: -12rem;
-  right: -14rem;
-  width: 42rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(52rem, 110vw);
   color: var(--color-paper);
   opacity: 0.07;
   pointer-events: none;
 }
 
-#contactMe .container {
+#namaste .container {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100svh - 7.5rem);
 }
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(2.5rem, 6vw, 6rem);
+.closing-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .eyebrow-light {
@@ -34,78 +40,51 @@
   background: var(--color-line-light);
 }
 
-.contact-intro h2 {
-  margin-top: 1.2rem;
+#namaste h2 {
+  margin-top: 1.4rem;
   color: var(--color-paper);
-  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  font-size: clamp(3.5rem, 9vw, 7.5rem);
   font-weight: 500;
-  line-height: 1.1;
-  letter-spacing: 0.03em;
+  line-height: 1;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
-.contact-intro h2 em {
+#namaste h2 em {
   font-style: italic;
   font-weight: 400;
   text-transform: none;
 }
 
-.contact-note {
-  margin-top: 1.5rem;
-  max-width: 30rem;
-  font-size: 0.92rem;
-  line-height: 1.9;
+.closing-note {
+  margin-top: 1.6rem;
+  max-width: 28rem;
+  font-size: 0.95rem;
+  line-height: 1.85;
   letter-spacing: 0.04em;
   color: rgba(242, 242, 246, 0.78);
 }
 
-.contact-instagram {
+.closing-instagram {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  margin-top: 2rem;
+  margin-top: 2.2rem;
   padding-bottom: 0.25rem;
   border-bottom: 1px solid var(--color-line-light);
   color: var(--color-paper);
   font-size: 0.74rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  transition: border-color var(--transition), opacity var(--transition);
+  transition: border-color var(--transition);
 }
 
-.contact-instagram:hover {
+.closing-instagram:hover {
   border-bottom-color: var(--color-paper);
-}
-
-.email-contact {
-  display: grid;
-  gap: 1.6rem;
-}
-
-.input-error {
-  border-bottom-color: #c08b97 !important;
-}
-
-.error-text {
-  margin-top: 0.4rem;
-  color: #c9a2ac;
-  font-size: 0.68rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.email-contact .button-container {
-  margin-top: 0.5rem;
-}
-
-.email-contact button:disabled {
-  cursor: wait;
-  opacity: 0.6;
 }
 
 /* ============== FOOTER ================== */
 .site-footer {
-  margin-top: 3.5rem;
   padding-top: 1.75rem;
   border-top: 1px solid var(--color-line-light);
   display: flex;
@@ -138,20 +117,12 @@
   color: rgba(242, 242, 246, 0.6);
 }
 
-/* ======================== MEDIA QUERIES ==================================*/
-@media screen and (max-width: 1024px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 @media screen and (max-width: 600px) {
-  #contactMe {
-    padding: 5rem 0 2rem;
+  #namaste {
+    padding: 5rem 0 1.75rem;
   }
 
   .site-footer {
-    margin-top: 4rem;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -160,10 +131,5 @@
   .footer-meta {
     justify-content: center;
     gap: 1rem;
-  }
-
-  .email-contact .button-container .btn {
-    width: 100%;
-    text-align: center;
   }
 }
