@@ -3,18 +3,27 @@ import {
   Navbar,
   Content,
   AboutMe,
-  Classes,
+  Path,
+  Studios,
+  Life,
   ContactMe,
+  SlideDeck,
 } from './components';
+
+const slides = [
+  { id: 'slide-home', label: 'Welcome', content: <Content /> },
+  { id: 'slide-teacher', label: 'The teacher', content: <AboutMe /> },
+  { id: 'slide-path', label: 'The practice', content: <Path /> },
+  { id: 'slide-studios', label: 'Studios and classes', content: <Studios /> },
+  { id: 'slide-life', label: 'Off the mat', content: <Life /> },
+  { id: 'slide-book', label: 'Book a session', theme: 'dark', content: <ContactMe /> },
+];
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <Content />
-      <AboutMe />
-      <Classes />
-      <ContactMe />
+      <SlideDeck slides={slides} />
     </>
   );
 };

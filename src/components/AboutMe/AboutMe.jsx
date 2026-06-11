@@ -1,37 +1,53 @@
 import React from 'react';
 import './aboutMe.css';
-import content from '@data';
-import AboutMeImage from '/assets/about-me-image.jpg';
+import PortraitImage from '/assets/portfolio/portrait-evening-smile.jpg';
+
+const stats = [
+  { value: '300', unit: 'hr', label: 'Certified teacher' },
+  { value: '7', unit: 'studios', label: 'Across Dubai' },
+  { value: '2', unit: 'traditions', label: 'Hatha and Ashtanga' },
+  { value: '60', unit: 'min', label: 'Breath-led flows' },
+];
 
 const AboutMe = () => {
   return (
-    <section id="aboutMe">
+    <section id="aboutMe" className="about-section">
       <div className="container">
-        <div className="image">
-          <img
-            src={AboutMeImage}
-            alt="Me"
-            className="object-cover object-right"
-          />
-        </div>
-        <div className="description">
-          <div
-            className="about-me"
-            dangerouslySetInnerHTML={{ __html: content.contentIntro }}
-          />
-          <div className="button-container">
-            <a href="#contactMe" className="btn">
-              Practice with me
-            </a>
+        <div className="about-grid">
+          <figure className="about-portrait img-mono">
+            <img
+              src={PortraitImage}
+              alt="Samyuktha smiling at golden hour in Dubai"
+            />
+            <figcaption>Samyuktha · Dubai</figcaption>
+          </figure>
+          <div className="about-copy">
+            <span className="eyebrow">01 — The teacher</span>
+            <p className="statement about-statement">
+              Hi! I'm <em>Samyuktha</em> — a 300hr certified teacher who
+              carried her mat from Bangalore to Dubai, and her conviction
+              everywhere: <em>yoga is for every body.</em>
+            </p>
+            <p className="about-note">
+              I teach Hatha and Ashtanga across Dubai's studios and gyms,
+              and online wherever you are. My classes are rooted in breath,
+              honest alignment, and quiet consistency — strong enough to
+              challenge you, gentle enough to keep you coming back.
+            </p>
           </div>
         </div>
-        {/* <div className="heading">{content.contentQuote}</div>
-        <div className="sub-heading">{content.contentIntro}</div>
-        <div className="button-container">
-          <a href="#practiceWithMe" className="btn btn-primary">
-            Practice with me
-          </a>
-        </div> */}
+
+        <div className="about-stats" aria-label="Teaching highlights">
+          {stats.map((stat) => (
+            <div className="about-stat" key={stat.label}>
+              <span className="stat-value">
+                {stat.value}
+                <em>{stat.unit}</em>
+              </span>
+              <span className="stat-label">{stat.label}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

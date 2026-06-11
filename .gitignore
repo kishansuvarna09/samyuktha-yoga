@@ -13,6 +13,12 @@ dist-ssr
 *.local
 backup
 
+# raw photo originals (web-optimized copies live in public/assets/portfolio)
+pictures/
+
+# local tooling
+.claude/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -23,3 +29,4 @@ backup
 *.njsproj
 *.sln
 *.sw?
+.gstack/

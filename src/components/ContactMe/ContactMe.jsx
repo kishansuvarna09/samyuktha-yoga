@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
@@ -10,6 +10,7 @@ import {
   nameValidation,
   isEmptyObject,
 } from '@lib/validate';
+import Mandala from '@components/Common/Mandala';
 import yogaSloth from '../../lotties/yoga-sloth.json';
 
 const classTypes = [
@@ -21,27 +22,10 @@ const classTypes = [
     name: 'INTERMEDIATE BATCH (8.30am to 9.30am)',
     value: 'level_1',
   },
-  // {
-  //   name: 'VINYASA',
-  //   value: 'level_2',
-  // },
-  // {
-  //   name: 'Pranayama/breathe work & meditation',
-  //   value: 'level_3',
-  // },
-  // {
-  //   name: 'Weekend Workshop',
-  //   value: 'level_4',
-  // },
 ];
 
-const Error = ({ message }) => (
-  <div
-    style={{ color: 'red', fontStyle: 'italic', fontSize: '12px' }}
-  >
-    {message}
-  </div>
-);
+const Error = ({ message }) =>
+  message ? <div className="error-text">{message}</div> : null;
 
 const defaultTemplateParams = {
   user_name: '',
@@ -146,34 +130,35 @@ const ContactMe = () => {
           <div>{response.error}</div>
         </div>
       )}
-      <section id="contactMe">
+      <section id="contactMe" className="contact-section">
+        <Mandala className="contact-mandala" />
         <div className="container">
-          <div className="section">
-            <div className="social-container">
-              <div className="label">Follow</div>
-              <div className="social-items">
-                <div className="social-icon">
-                  <a
-                    href="https://www.instagram.com/samyuktha.acharya"
-                    className="instagram social"
-                  >
-                    <FontAwesomeIcon icon={faInstagram} size="2x" />
-                  </a>
-                </div>
-              </div>
+          <div className="contact-grid">
+            <div className="contact-intro">
+              <span className="eyebrow eyebrow-light">
+                05 — Book a session
+              </span>
+              <h2>
+                Begin with a class that feels <em>right for your body.</em>
+              </h2>
+              <p className="contact-note">
+                Yoga practices are not just a set of exercises — working
+                with the body, we reveal new facets of our consciousness.
+                Book a session to receive the full itinerary and fee
+                structure.
+              </p>
+              <a
+                href="https://www.instagram.com/samyuktha.acharya"
+                className="contact-instagram"
+                aria-label="Follow Samyuktha Yoga on Instagram"
+              >
+                <FontAwesomeIcon icon={faInstagram} />
+                <span>@samyuktha.acharya</span>
+              </a>
             </div>
             <div className="email-contact">
-              <div>
-                Click on "Book Session" to get complete itinerary of
-                the session and fee structure
-              </div>
               <div
-                className="input"
-                style={{
-                  border: errors?.user_name
-                    ? '2px solid red'
-                    : '1px solid rgb(177 142 142)',
-                }}
+                className={`input ${errors?.user_name ? 'input-error' : ''}`}
               >
                 <input
                   placeholder="Name"
@@ -185,12 +170,7 @@ const ContactMe = () => {
                 <Error message={errors?.user_name} />
               </div>
               <div
-                className="input"
-                style={{
-                  border: errors?.user_email
-                    ? '2px solid red'
-                    : '1px solid rgb(177 142 142)',
-                }}
+                className={`input ${errors?.user_email ? 'input-error' : ''}`}
               >
                 <input
                   placeholder="Email"
@@ -203,31 +183,18 @@ const ContactMe = () => {
               </div>
 
               <div
-                className="input"
-                style={{
-                  border: errors?.class_type
-                    ? '2px solid red'
-                    : '1px solid rgb(177 142 142)',
-                }}
+                className={`input ${errors?.class_type ? 'input-error' : ''}`}
               >
                 <select
                   name="class_type"
                   onChange={handleChange}
                   value={templateParams.class_type}
                 >
-                  <option
-                    value=""
-                    disabled
-                    className="text-[0.75rem] md:text-[1rem]"
-                  >
+                  <option value="" disabled>
                     Select a class
                   </option>
                   {classTypes.map((_class) => (
-                    <option
-                      key={_class.value}
-                      value={_class.name}
-                      className="text-[0.75rem] lg:text-[1rem]"
-                    >
+                    <option key={_class.value} value={_class.name}>
                       {_class.name}
                     </option>
                   ))}
@@ -235,12 +202,7 @@ const ContactMe = () => {
                 <Error message={errors?.class_type} />
               </div>
               <div
-                className="input"
-                style={{
-                  border: errors?.message
-                    ? '2px solid red'
-                    : '1px solid rgb(177 142 142)',
-                }}
+                className={`input ${errors?.message ? 'input-error' : ''}`}
               >
                 <textarea
                   className="text-area"
@@ -254,7 +216,8 @@ const ContactMe = () => {
               <div className="button-container">
                 <button
                   type="button"
-                  className="btn btn-primary"
+                  className="btn btn-light"
+                  disabled={sendingEmail}
                   onClick={async (e) => {
                     e.preventDefault();
                     if (!sendingEmail) {
@@ -269,6 +232,17 @@ const ContactMe = () => {
               </div>
             </div>
           </div>
+
+          <footer className="site-footer">
+            <div className="footer-brand">
+              Samyuktha<span>yoga</span>
+            </div>
+            <div className="footer-meta">
+              <span>Dubai · Online</span>
+              <span>Hatha · Ashtanga</span>
+              <span>© {new Date().getFullYear()} Samyuktha Yoga</span>
+            </div>
+          </footer>
         </div>
       </section>
     </>

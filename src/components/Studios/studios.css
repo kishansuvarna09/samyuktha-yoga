@@ -1,0 +1,161 @@
+#studios {
+  background: var(--color-bg);
+  padding: 5.5rem 0 2.5rem;
+  overflow: hidden;
+}
+
+.studios-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.studios-statement {
+  max-width: 46rem;
+}
+
+/* ============ MARQUEE ============ */
+.studios-marquee {
+  margin: clamp(1.5rem, 3.5vh, 2.5rem) 0;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 26s linear infinite;
+}
+
+.studios-marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 2.4rem;
+  padding-right: 2.4rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+.marquee-star {
+  font-size: 0.55em;
+  color: var(--color-violet);
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+/* ============ BODY ============ */
+.studios-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(2rem, 4.5vw, 4.5rem);
+  align-items: center;
+}
+
+.studios-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1rem, 2vw, 1.75rem);
+}
+
+.studio-frame {
+  position: relative;
+  background: var(--color-paper);
+  padding: 0.5rem 0.5rem 2rem;
+  box-shadow: 0 18px 40px rgba(24, 21, 39, 0.15);
+}
+
+.studio-frame img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  max-height: 42vh;
+}
+
+.studio-frame figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.5rem;
+  text-align: center;
+  font-size: 0.6rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.studios-offerings {
+  display: flex;
+  flex-direction: column;
+}
+
+.offering {
+  padding: 1.1rem 0;
+}
+
+.offering + .offering {
+  border-top: 1px solid var(--color-line);
+}
+
+.offering h3 {
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.offering p {
+  margin-top: 0.25rem;
+  font-size: 0.86rem;
+  line-height: 1.65;
+  letter-spacing: 0.03em;
+  opacity: 0.85;
+}
+
+@media screen and (max-width: 780px) {
+  #studios {
+    padding: 5rem 0 2rem;
+  }
+
+  .studios-body {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .studios-photos {
+    max-width: 22rem;
+    margin: 0 auto;
+  }
+
+  .studio-frame img {
+    max-height: 26vh;
+  }
+
+  .offering {
+    padding: 0.8rem 0;
+    text-align: center;
+  }
+}

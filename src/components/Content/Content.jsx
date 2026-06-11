@@ -1,35 +1,85 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import ContentImage from '/assets/content-image.jpg';
-// import './content.css';
+import HeroImage from '/assets/portfolio/portrait-with-mat.jpg';
+import './content.css';
+
+// Row of moon-phase shapes flanking a circular photograph,
+// echoing the eclipse motif of the design reference.
+const MoonPhases = () => (
+  <svg
+    viewBox="0 0 1200 400"
+    className="moon-phases"
+    aria-label="Samyuktha with her yoga mat, framed by moon phases"
+    role="img"
+  >
+    <defs>
+      <clipPath id="hero-photo-clip">
+        <circle cx="600" cy="200" r="168" />
+      </clipPath>
+      <clipPath id="phase-left-outer">
+        <circle cx="150" cy="200" r="92" />
+      </clipPath>
+      <clipPath id="phase-right-outer">
+        <circle cx="1050" cy="200" r="92" />
+      </clipPath>
+    </defs>
+
+    {/* waning crescent — far left */}
+    <g clipPath="url(#phase-left-outer)">
+      <circle cx="150" cy="200" r="92" fill="var(--color-ink-deep)" />
+      <circle cx="116" cy="200" r="88" fill="var(--color-bg)" />
+    </g>
+
+    {/* half moon — left */}
+    <circle cx="375" cy="200" r="104" fill="var(--color-ink-deep)" />
+    <rect x="271" y="96" width="104" height="208" fill="var(--color-bg)" />
+
+    {/* full moon — the photograph */}
+    <circle cx="600" cy="200" r="174" fill="var(--color-ink-deep)" />
+    <image
+      href={HeroImage}
+      x="408"
+      y="-20"
+      width="384"
+      height="440"
+      preserveAspectRatio="xMidYMid slice"
+      clipPath="url(#hero-photo-clip)"
+    />
+
+    {/* half moon — right (mirrored) */}
+    <circle cx="825" cy="200" r="104" fill="var(--color-ink-deep)" />
+    <rect x="825" y="96" width="104" height="208" fill="var(--color-bg)" />
+
+    {/* waxing crescent — far right */}
+    <g clipPath="url(#phase-right-outer)">
+      <circle cx="1050" cy="200" r="92" fill="var(--color-ink-deep)" />
+      <circle cx="1084" cy="200" r="88" fill="var(--color-bg)" />
+    </g>
+  </svg>
+);
 
 const Content = () => {
   return (
-    <section id="content">
-      <div className="min-h-screen relative">
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="">
-            <img
-              src={ContentImage}
-              alt="Cover"
-              className="h-screen object-cover object-[75%] lg:object-[10px 20px]"
-            />
+    <section id="content" className="hero-section">
+      <div className="hero-shell">
+        <div className="hero-masthead">
+          <div className="hero-flanks" aria-hidden="true">
+            <span>Dubai</span>
+            <span>Hatha · Ashtanga · Vinyasa</span>
           </div>
-        </motion.div>
-        <motion.div
-          className="absolute top-0 w-full h-full grid place-items-center"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2 }}
-        >
-          <div className="text-5xl font-extralight w-[90%] md:w-[60%] lg:w-[40%] leading-[6rem] text-center">
-            <mark>GUIDING YOU TOWARDS A STRONG MIND AND BODY</mark>
-          </div>
-        </motion.div>
+          <h1>
+            Samyuktha<span className="hero-yoga">yoga</span>
+          </h1>
+          <p className="hero-tagline">
+            Seven studios. Two traditions. <em>One breath at a time.</em>
+          </p>
+          <a href="#contactMe" className="btn">
+            Book a session
+          </a>
+        </div>
+        <MoonPhases />
+        <p className="hero-hint" aria-hidden="true">
+          Scroll
+        </p>
       </div>
     </section>
   );

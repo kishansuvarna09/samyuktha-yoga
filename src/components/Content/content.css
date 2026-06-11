@@ -1,0 +1,123 @@
+.hero-section {
+  background: var(--color-bg);
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+.hero-shell {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+  padding: 6.5rem 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 3.5vh, 3rem);
+}
+
+.hero-masthead {
+  text-align: center;
+}
+
+.hero-flanks {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.66rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.hero-masthead h1 {
+  font-size: clamp(3rem, 9.8vw, 8.75rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+}
+
+.hero-yoga {
+  font-style: italic;
+  font-weight: 400;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+  margin-left: 0.6rem;
+}
+
+.hero-tagline {
+  margin: 1.1rem auto 1.6rem;
+  max-width: 38rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 1.8vw, 1.45rem);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+}
+
+.hero-tagline em {
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.05em;
+}
+
+.moon-phases {
+  width: min(100%, 64rem);
+  margin: 0 auto;
+  height: auto;
+}
+
+.moon-phases image {
+  filter: grayscale(1) contrast(1.05) brightness(1.04);
+}
+
+.hero-hint {
+  text-align: center;
+  font-size: 0.6rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  animation: hint-drift 2.6s ease-in-out infinite;
+}
+
+@keyframes hint-drift {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(5px);
+    opacity: 0.25;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .hero-shell {
+    padding-top: 6rem;
+  }
+
+  .hero-flanks {
+    display: none;
+  }
+
+  .hero-masthead h1 {
+    font-size: clamp(2.6rem, 13vw, 4.5rem);
+    line-height: 1.05;
+  }
+
+  /* let the italic suffix drop to its own line so the
+     headline never overflows narrow screens */
+  .hero-yoga {
+    display: block;
+    margin-left: 0;
+  }
+
+  .hero-tagline {
+    letter-spacing: 0.1em;
+  }
+}

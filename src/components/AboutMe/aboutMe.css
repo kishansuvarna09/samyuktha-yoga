@@ -1,51 +1,155 @@
 #aboutMe {
-  height: 100%;
+  background: var(--color-bg);
+  padding: 5.5rem 0 2.5rem;
 }
+
 #aboutMe .container {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.75rem, 4vh, 3rem);
+}
+
+.about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 4rem;
-  place-items: center;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
 }
 
-#aboutMe .container > div {
-  padding: 0.5rem;
+.about-portrait {
+  position: relative;
+  background: var(--color-paper);
+  padding: 0.6rem 0.6rem 2.2rem;
+  box-shadow: 0 22px 48px rgba(24, 21, 39, 0.16);
+  max-width: 24rem;
+  justify-self: center;
 }
 
-#aboutMe .description {
-  margin: auto 0;
+.about-portrait img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  max-height: 56vh;
 }
 
-#aboutMe .description > div {
-  padding: 0.5rem;
+.about-portrait figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.55rem;
+  text-align: center;
+  font-size: 0.62rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  opacity: 0.7;
 }
 
-#aboutMe .description .quote {
-  font-size: 1.5rem;
+.about-copy .statement {
+  text-align: left;
+  margin-top: 1.1rem;
+}
+
+.about-note {
+  margin-top: 1.4rem;
+  max-width: 34rem;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  letter-spacing: 0.03em;
+  opacity: 0.9;
+}
+
+.about-stats {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.about-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.about-stat + .about-stat {
+  border-left: 1px solid var(--color-line);
+}
+
+.stat-value {
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 4vw, 3.4rem);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--color-ink);
+}
+
+.stat-value em {
+  font-style: italic;
   font-weight: 400;
+  font-size: 0.45em;
+  margin-left: 0.25rem;
 }
 
-/* #aboutMe .container .image:hover {
-  transform: scale(1.2);
-  tranisiton: 0.4s;
-} */
-/* ======================== MEDIA QUERIES (MEDIUM DEVICES) ==================================*/
-@media screen and (max-width: 1024px) {
-  #aboutMe .container {
-    padding: 2rem;
-  }
-  #aboutMe .description .quote {
-    font-size: 1.4rem;
-  }
+.stat-label {
+  font-size: 0.64rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.7;
 }
 
-/* ======================== MEDIA QUERIES (SMALL DEVICES) ==================================*/
-@media screen and (max-width: 600px) {
-  #aboutMe .container {
-    display: block;
-    padding: 1rem;
+@media screen and (max-width: 780px) {
+  #aboutMe {
+    padding: 5rem 0 2rem;
   }
-  #aboutMe .description .quote {
-    font-size: 1.2rem;
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-portrait {
+    max-width: 15rem;
+  }
+
+  .about-portrait img {
+    max-height: 32vh;
+  }
+
+  .about-copy .statement {
+    text-align: center;
+  }
+
+  .about-copy {
+    text-align: center;
+  }
+
+  .about-note {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.88rem;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-stat {
+    padding: 1rem 0.5rem;
+  }
+
+  .about-stat + .about-stat {
+    border-left: 0;
+  }
+
+  .about-stat:nth-child(even) {
+    border-left: 1px solid var(--color-line);
+  }
+
+  .about-stat:nth-child(n + 3) {
+    border-top: 1px solid var(--color-line);
   }
 }

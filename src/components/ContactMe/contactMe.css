@@ -1,78 +1,169 @@
 #contactMe {
-  height: 100%;
-  padding: 1rem 0;
+  background: var(--color-ink-deep);
+  color: var(--color-paper);
+  padding: 5.5rem 0 2rem;
+  overflow: hidden;
 }
+
+.contact-mandala {
+  position: absolute;
+  top: -12rem;
+  right: -14rem;
+  width: 42rem;
+  color: var(--color-paper);
+  opacity: 0.07;
+  pointer-events: none;
+}
+
 #contactMe .container {
-  padding: 1rem;
-  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
-    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  position: relative;
 }
-#contactMe .section {
+
+.contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.eyebrow-light {
+  color: var(--color-paper);
+}
+
+.eyebrow-light::before {
+  background: var(--color-line-light);
+}
+
+.contact-intro h2 {
+  margin-top: 1.2rem;
+  color: var(--color-paper);
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.contact-intro h2 em {
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.contact-note {
+  margin-top: 1.5rem;
+  max-width: 30rem;
+  font-size: 0.92rem;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+  color: rgba(242, 242, 246, 0.78);
+}
+
+.contact-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 2rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--color-line-light);
+  color: var(--color-paper);
+  font-size: 0.74rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  transition: border-color var(--transition), opacity var(--transition);
+}
+
+.contact-instagram:hover {
+  border-bottom-color: var(--color-paper);
 }
 
 .email-contact {
   display: grid;
+  gap: 1.6rem;
+}
+
+.input-error {
+  border-bottom-color: #c08b97 !important;
+}
+
+.error-text {
+  margin-top: 0.4rem;
+  color: #c9a2ac;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.email-contact .button-container {
+  margin-top: 0.5rem;
+}
+
+.email-contact button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+/* ============== FOOTER ================== */
+.site-footer {
+  margin-top: 3.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--color-line-light);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
   gap: 1.5rem;
-  width: 100%;
-  align-items: center;
 }
-.social-contact {
-  display: grid;
-  justify-content: center;
-  grid-template-rows: 5rem auto;
+
+.footer-brand {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--color-paper);
+  line-height: 1;
 }
-.social-container {
-  display: grid;
-  grid-template-rows: 3rem auto;
-  justify-content: center;
-  align-content: center;
+
+.footer-brand span {
+  font-style: italic;
+  font-weight: 400;
+  margin-left: 0.15rem;
 }
-.social-container > div {
-  padding: 2rem;
-  text-align: center;
+
+.footer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  font-size: 0.64rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(242, 242, 246, 0.6);
 }
-.social-container .label {
-  font-size: 28px;
-  font-weight: 600;
-  padding: 1rem;
-}
-a.social {
-  padding: 0.1rem 0.3rem;
-  border-radius: 10px;
-  transition: transform 250ms;
-  display: inline-block;
-}
-a.social:hover {
-  transform: translateY(5px);
-  transform: scale(1.5);
-}
-a.instagram {
-  color: white;
-  background: linear-gradient(
-    45deg,
-    #405de6,
-    #5851db,
-    #833ab4,
-    #c13584,
-    #e1306c,
-    #fd1d1d
-  );
-}
-/* ======================== MEDIA QUERIES (MEDIUM DEVICES) ==================================*/
+
+/* ======================== MEDIA QUERIES ==================================*/
 @media screen and (max-width: 1024px) {
-  #contactMe .section {
-    grid-template-rows: 1fr;
-    grid-template-columns: auto;
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 }
 
-/* ======================== MEDIA QUERIES (SMALL DEVICES) ==================================*/
 @media screen and (max-width: 600px) {
-  #contactMe .section {
-    grid-template-rows: 1fr;
-    grid-template-columns: auto;
+  #contactMe {
+    padding: 5rem 0 2rem;
+  }
+
+  .site-footer {
+    margin-top: 4rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-meta {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .email-contact .button-container .btn {
+    width: 100%;
+    text-align: center;
   }
 }
