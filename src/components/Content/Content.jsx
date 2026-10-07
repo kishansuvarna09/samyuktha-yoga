@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroImage from '/assets/portfolio/portrait-with-mat.jpg';
+import HeroImage from '/assets/portfolio/portrait-sitting.jpg';
 import './content.css';
 
 // Row of moon-phase shapes flanking a circular photograph,
@@ -8,7 +8,7 @@ const MoonPhases = () => (
   <svg
     viewBox="0 0 1200 400"
     className="moon-phases"
-    aria-label="Samyuktha with her yoga mat, framed by moon phases"
+    aria-label="Samyuktha seated and smiling, framed by moon phases"
     role="img"
   >
     <defs>
