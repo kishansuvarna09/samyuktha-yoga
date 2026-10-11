@@ -9,7 +9,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "assistant:index": "node scripts/build-assistant-index.mjs",
-    "assistant:eval": "node scripts/eval-assistant.mjs"
+    "assistant:eval": "node scripts/eval-assistant.mjs",
+    "assistant:why": "node scripts/why-assistant.mjs"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",

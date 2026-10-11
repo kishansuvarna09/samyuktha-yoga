@@ -68,17 +68,34 @@ const CASES = [
   ['Are you a real person or a robot?', 'human'],
   ['Is this ChatGPT?', 'human'],
   ['Thanks so much!', 'thanks'],
-  ['How long have you been certified?', 'about'],
-  // Ambiguous: "your training" (qualifications) or "the training you offer".
-  ["What's your yoga training?", ['about', 'styles']],
+  ['How long have you been certified?', ['about', 'journey']],
+  // Ambiguous: her qualifications, her own training routine, or what she offers.
+  ["What's your yoga training?", ['about', 'journey', 'routine', 'styles']],
+  // Questions about Sam herself; the model barely sees "you" vs "I", so these
+  // guard against them landing on the visitor-facing beginner/home answers.
+  ['How did you start yoga?', 'story'], // a real visitor question that misfired
+  ['What made you fall in love with yoga?', 'story'],
+  ['Why did you decide to teach?', 'journey'],
+  ['How many years have you been a teacher?', 'journey'],
+  ['Do you work out as well?', 'routine'],
+  ['Is yoga part of your daily life?', 'routine'],
+  ['How many days a week should I be doing yoga?', 'home'],
+  // Styles she doesn't list, and guards that listed ones still land right.
+  // the styles answer lists exactly what she teaches, which answers this too
+  ['Any iyengar classes?', ['other-styles', 'styles', 'fallback']],
+  ['Can you teach me restorative yoga?', ['other-styles', 'fallback']],
+  ['Do you offer Ashtanga classes?', ['styles', 'ashtanga']],
+  ['Can my kids join a class?', 'kids'],
+  ['Do you speak Hindi in class?', 'languages'],
   ["What's the weather in Dubai tomorrow?", 'fallback'],
   ['Can you recommend a good restaurant?', 'fallback'],
   ['Write me a poem about the sea', 'fallback'],
   ["How do I fix my car's engine?", 'fallback'],
   ['What is the price of bitcoin?', 'fallback'],
   ['Who won the football match yesterday?', 'fallback'],
-  // "Studios provide mats" is a fair reply here too.
-  ['Do you sell yoga mats?', ['fallback', 'bring']],
+  // "Studios provide mats" and "anything else on your wishlist, message me"
+  // are both fair replies here.
+  ['Do you sell yoga mats?', ['fallback', 'bring', 'other-styles']],
   ["What's your favourite food?", 'fallback'],
 ];
 
@@ -99,13 +116,13 @@ for (const [, expect] of CASES) {
 
 const { pipeline } = await import('@huggingface/transformers');
 const extractor = await pipeline('feature-extraction', MODEL_ID, { dtype: MODEL_DTYPE });
-const output = await extractor(
-  CASES.map(([question]) => question),
-  { pooling: 'mean', normalize: true }
-);
-const queryVectors = output.tolist();
-
-const embeddingRanks = CASES.map((_, i) => rankByEmbedding(Float32Array.from(queryVectors[i]), decoded));
+// One question at a time, as in the browser: batching pads inputs, which
+// shifts scores slightly and can flip near-ties.
+const embeddingRanks = [];
+for (const [question] of CASES) {
+  const output = await extractor(question, { pooling: 'mean', normalize: true });
+  embeddingRanks.push(rankByEmbedding(output.data, decoded));
+}
 const keywordRanks = CASES.map(([question]) => rankByKeywords(question, answers));
 
 // pass: right answer (or fallback when expected); clarify: a "did you mean"

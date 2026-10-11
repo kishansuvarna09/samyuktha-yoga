@@ -43,14 +43,56 @@ export const answers = [
       'tell me about yourself',
       'who is samyuktha',
       'are you a certified teacher',
-      'what qualifications do you have',
       'what is your background',
       'where are you from',
-      'where did you do your teacher training',
-      'how experienced are you',
     ],
     answer:
       "I'm Samyuktha, a 300hr certified yoga teacher. I trained in Rishikesh (yes, by the Ganga, and yes, it's as magical as it sounds), carried my mat from Bangalore to Dubai, and now teach Hatha, Ashtanga and Vinyasa across the city. I believe yoga is for every body, and that matcha counts as a personality trait.",
+  },
+  {
+    id: 'story',
+    label: 'How did you start yoga?',
+    questions: [
+      'how did you start yoga',
+      'how did you get into yoga',
+      'what got you into yoga',
+      'when did you start doing yoga',
+      'what made you start yoga',
+      'why do you do yoga',
+    ],
+    answer:
+      'Lockdown gave some people sourdough. It gave me yoga. I was underweight and thin as a stick, so I started practising every day at home. My breathing got better, and for the first time I felt properly strong and capable in my body. Two years of living-room yoga later, I was hooked enough to train as a teacher.',
+  },
+  {
+    id: 'journey',
+    label: 'How did you become a teacher?',
+    questions: [
+      'why did you become a yoga teacher',
+      'how did you become a yoga teacher',
+      'how long have you been teaching',
+      'when did you start teaching',
+      'how much teaching experience do you have',
+      'how experienced are you',
+      'what qualifications do you have',
+      'where did you do your teacher training',
+    ],
+    answer:
+      'Yoga changed how I breathe and how strong I feel, so of course I wanted to pass it on. After two years of daily practice at home, I did my 200hr teacher training (with strength training at the gym on the side), then went to Rishikesh for my 300hr to level up. I started teaching online, then studios, private classes and now events. Two years of teaching so far, and counting.',
+  },
+  {
+    id: 'routine',
+    label: 'Do you practise every day?',
+    questions: [
+      'do you practice every day',
+      'do you do yoga daily yourself',
+      'what is your own yoga routine',
+      'what is your workout routine',
+      'do you go to the gym',
+      'how often do you work out',
+      'how do you stay fit',
+    ],
+    answer:
+      "Every single day. Yoga daily, mixed with Pilates, and the gym 2 to 3 times a week for strength training. Not bad for someone who used to be thin as a stick. I'd never ask you to do anything I don't do myself.",
   },
   {
     id: 'styles',
@@ -65,6 +107,25 @@ export const answers = [
     ],
     answer:
       "Three, and they're like siblings with very different personalities. Hatha is the calm one: slow, steady, all about foundations. Vinyasa is the dancer: every move on the breath. Ashtanga is the overachiever: structured, disciplined, and secretly the reason your arms get strong. Not sure which is yours? Ask me which style to start with.",
+  },
+  {
+    // Without this, "do you teach X?" for an unlisted style grabs whichever
+    // answer shares the wording (kundalini -> "can you teach in malayalam").
+    id: 'other-styles',
+    label: 'Do you teach other styles?',
+    questions: [
+      'do you teach pilates',
+      'do you do hot yoga',
+      'do you teach aerial yoga',
+      'do you teach yin yoga',
+      'do you teach meditation',
+      'do you teach kundalini',
+      'do you teach power yoga',
+      'do you offer other types of yoga',
+    ],
+    answer:
+      "Hatha, Ashtanga and Vinyasa are my three great loves. If something else is on your wishlist (Pilates, hot yoga, yin, meditation...), message me on Instagram and ask. I'll tell you honestly whether I'm the right person for it.",
+    link: 'instagram',
   },
   {
     id: 'which-style',
@@ -239,6 +300,7 @@ export const answers = [
       'is there a class for my son',
       'yoga for kids',
       'what age can kids start yoga',
+      'can children join your classes',
     ],
     answer:
       'Yes! I teach kids from 5 years up, wherever suits you. Expect playful first asanas, lots of patience and an alarming number of animal poses. Message me on Instagram about your little one.',

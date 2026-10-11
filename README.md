@@ -30,6 +30,11 @@ To change or add answers:
 3. `npm run assistant:eval` checks the test questions in
    `scripts/eval-assistant.mjs` still land on the right answers.
 
+If a real visitor question gets a wrong answer, `npm run assistant:why --
+"their question"` shows which sample phrasing it matched. Usually the fix is
+an answer for that topic, or a few more phrasings on the right one; then add
+the question to the eval so it stays fixed.
+
 `vercel.json` sets `ONNXRUNTIME_NODE_INSTALL=skip` on install: the Node build of
 the model runtime (used only by the two scripts above) would otherwise download
 hundreds of MB of CUDA libraries on Vercel's Linux build machines.
