@@ -6,8 +6,10 @@ import Studios from './Studios/Studios';
 import Life from './Life/Life';
 import Closing from './Closing/Closing';
 import SlideDeck from './SlideDeck/SlideDeck';
+import Assistant from './Assistant/Assistant';
 
 export {
+  Assistant,
   Navbar,
   Content,
   AboutMe,

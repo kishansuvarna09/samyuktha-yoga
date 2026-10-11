@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Assistant,
   Navbar,
   Content,
   AboutMe,
@@ -24,6 +25,7 @@ const App = () => {
     <>
       <Navbar />
       <SlideDeck slides={slides} />
+      <Assistant />
     </>
   );
 };

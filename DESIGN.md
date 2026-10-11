@@ -48,6 +48,9 @@ No other colors. Photography is rendered grayscale via `filter: grayscale(1)`
 - Buttons: outlined uppercase pills (`.btn`), fill on hover; `.btn-light` on dark.
 - Inputs: underline-only fields on the dark booking section.
 - Stats row: large serif numerals with italic unit + small caps label, hairline grid.
+- "Ask Samyuktha" chat (`Assistant`): ink pill launcher fixed bottom-right
+  (inverts on the dark slide), paper panel with periwinkle bot bubbles, ink
+  visitor bubbles and outlined suggestion pills; full-screen sheet under 600px.
 
 ## Page structure (slide deck, single page)
 
